@@ -1,0 +1,14 @@
+// Example using 'Cerulean' bootswatch
+//
+// First import cerulean variables
+@import "bootswatch/cosmo/variables";
+
+// Then bootstrap itself
+@import "bootstrap";
+
+// Bootstrap body padding for fixed navbar
+body { padding-top: 60px; }
+
+// And finally bootswatch style itself
+@import "bootswatch/cerulean/bootswatch";
+
