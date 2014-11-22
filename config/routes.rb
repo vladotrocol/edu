@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :users
   root to: 'home#index'
+
+  devise_scope :user do
+    match ':controller(/:action(/:id))', :via => [:get, :post]
+  end
+  devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

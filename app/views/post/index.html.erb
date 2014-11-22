@@ -1,0 +1,17 @@
+<div class='panel panel-default'>
+	<div class="panel-body col-md-10 col-md-offset-1">
+		<% @posts.each do |post| %>
+		<div class="panel panel-default">
+  			<div class="panel-body">
+				<h1 class="text-left"><%= post.title %></h1>
+				<p><%= post.description %></p>
+				<hr>
+				<%= post.content.html_safe %>
+				<hr>
+				<h3 class="text-right"><strong><small>by <%= @users.find(post.user_id).name%></small></strong></h3>
+			</div>
+		<%end%>
+    </div>
+</div>
+</div>
+

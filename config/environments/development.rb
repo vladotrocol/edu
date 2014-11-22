@@ -6,7 +6,9 @@ Rails.application.configure do
 
   #Settings from http://arubystory.blogspot.ro/2013/12/creating-simple-todo-application-with.html
   # Used for Mailcatcher/devise
-  config.action_mailer.default_url_options = { :host => 'https://371d00ae.ngrok.com' } 
+  # config.action_mailer.default_url_options = { :host => 'https://371d00ae.ngrok.com' } 
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' } 
+  ActionMailer::Base.default :content_type => "text/html"
   # config.action_mailer.delivery_method = :smtp 
   # config.action_mailer.smtp_settings = {:address => "localhost", :port => 1025}
   

@@ -15,8 +15,11 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 
 gem 'bootstrap-sass', '~> 3.3.0'
+gem 'rails-bootstrap-markdown'
 
 gem 'bootswatch-rails'
+gem 'redcarpet'
+gem 'simple_form'
 
 gem 'figaro'
 

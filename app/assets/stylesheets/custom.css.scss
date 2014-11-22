@@ -1,14 +1,33 @@
 // Example using 'Cerulean' bootswatch
 //
+@import "bootstrap-sprockets";
 // First import cerulean variables
-@import "bootswatch/cosmo/variables";
+@import "bootswatch/yeti/variables";
 
 // Then bootstrap itself
 @import "bootstrap";
 
+
 // Bootstrap body padding for fixed navbar
-body { padding-top: 60px; }
+body { 
+	padding-top: 40px;
+	// background: image-url("photography.png") repeat; 
+}
 
 // And finally bootswatch style itself
-@import "bootswatch/cerulean/bootswatch";
+@import "bootswatch/yeti/bootswatch";
 
+.well, .btn, .form-control{
+	height: auto;
+  	-webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  	font-size: 16px;
+  	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.mycontent-left {
+  border-right: 1px solid #bbb;
+}
