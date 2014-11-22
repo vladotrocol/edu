@@ -3,6 +3,7 @@
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <h1 class="form-signin-heading text-center">Log in</h1>
     <%= render 'layouts/error' %>
+    <%= link_to "Log in with Facebook", user_omniauth_authorize_path(:facebook) %>
   <div class="form-group">
     <%= f.label :email, class: 'control-label'%><br />
     <%= f.email_field :email, autofocus: true, class: 'form-control' %>

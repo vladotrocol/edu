@@ -9,8 +9,4 @@
 <% end %>
 </div>
 
-<script type="text/javascript">
-$(document).on('ready page:load', function(){
-  $(".markdown-editor").markdown()
-});
-</script>
+<%= render 'layouts/fix_markdown' %>

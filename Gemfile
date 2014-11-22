@@ -20,6 +20,8 @@ gem 'rails-bootstrap-markdown'
 gem 'bootswatch-rails'
 gem 'redcarpet'
 gem 'simple_form'
+gem 'omniauth-facebook'
+gem 'certified'
 
 gem 'figaro'
 
