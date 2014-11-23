@@ -31,3 +31,9 @@ body {
 .mycontent-left {
   border-right: 1px solid #bbb;
 }
+
+img[alt="postpic"] { 
+  max-width:  500px; 
+  min-width:  100px; 
+  display: block;
+}

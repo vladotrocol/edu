@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user_email/new'
+
   root to: 'home#index'
 
   devise_scope :user do

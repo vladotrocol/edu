@@ -26,7 +26,7 @@
 			<td><%= user.email %></td>
 			<td><%= calculate_age(user.birthday) %></td>
 			<td><%= number_to_phone(user.phone) %></td>
-			<td><%= link_to "Send Email", {:controller => '/notifier', :action => 'new', :id => user.id}%></td>
+			<td><%= link_to "Send Email", {:controller => '/user_email', :action => 'new', :id => user.id}%></td>
 			<td><%= link_to "Blog", {:controller => '/post', :action => 'index'}%></td>
 			<td><%= link_to "New Post", {:controller => '/post', :action => 'new'}%></td>			
 		</tr>
