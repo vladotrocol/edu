@@ -37,3 +37,10 @@ img[alt="postpic"] {
   min-width:  100px; 
   display: block;
 }
+
+.dbTable{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100px;
+}
