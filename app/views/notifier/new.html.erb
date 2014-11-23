@@ -1,9 +1,0 @@
-<div class="well col-md-10 col-md-offset-1">
- <%= form_for(:post, :url => {:action => 'send_email', :id => @recipient}) do |f| %>
-    <%= f.text_field(:title, class: 'form-control')%>
-    <%= f.text_field(:description, class: 'form-control')%>
-    <%= f.text_area(:content, rows: 15, class: "markdown-editor")%>
-    <%= f.button "Submit", type: 'submit', class: 'btn col-md-4 col-md-offset-4 btn-large btn-success', id: 'medit' %>
-<% end %>
-</div>
-<%= render 'layouts/fix_markdown' %>
