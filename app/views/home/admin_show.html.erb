@@ -1,3 +1,28 @@
-<% @cols.each do |column| %>
-	<div><%= column.name%>:<%=@user[column.name]%></div></br>
-<%end%>
+</br>
+</br>
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3 class="panel-title text-right"><%= @user.name %></h3>
+  </div>
+  <div class="panel-body">
+  	<table class="table table-striped">
+  	<thead>
+    		<tr>
+			    <th>Attribute</th>
+			    <th>Value</th>
+		</tr>
+	</thead>
+	<tbody>	
+		
+    		<% @cols.each do |column| %>
+    		<tr>
+				<td><%= column.name%></td>
+				<td><%=@user[column.name]%></td>
+				</tr>
+			<%end%>
+		
+	</tbody>
+	</table>
+  </div>
+</div>
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141123140815) do
+ActiveRecord::Schema.define(version: 20141124143400) do
 
   create_table "authentications", force: true do |t|
     t.integer  "user_id"
@@ -26,6 +26,15 @@ ActiveRecord::Schema.define(version: 20141123140815) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "courses_users", force: true do |t|
+    t.integer  "course_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "courses_users", ["course_id", "user_id"], name: "index_courses_users_on_course_id_and_user_id", using: :btree
 
   create_table "posts", force: true do |t|
     t.integer  "user_id"
