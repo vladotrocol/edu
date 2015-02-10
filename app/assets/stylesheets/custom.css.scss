@@ -44,3 +44,90 @@ img[alt="postpic"] {
   text-overflow: ellipsis;
   max-width: 100px;
 }
+
+span.glyphicon-list-alt {
+  font-size: 4em;
+  color: #eee;
+  padding-top: 15%;
+}
+span.glyphicon-book {
+  font-size: 4em;
+  color: #eee;
+  padding-top: 15%;
+}
+span.glyphicon-text-width {
+  font-size: 4em;
+  color: #eee;
+  padding-top: 15%;
+}
+
+.vis{
+  background-color: #000000;
+}
+
+.stretched{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.GlyphContainer1{
+  background: #ff9200;
+  width: 60%;
+  height: 8em;
+  margin-left: 20%;
+}
+
+.GlyphContainer2{
+  background: #00c90d;
+  width: 60%;
+  height: 8em;
+  margin-left: 20%;
+}
+
+.GlyphContainer3{
+  background: #8805a8;
+  width: 60%;
+  height: 8em;
+  margin-left: 20%;
+}
+
+.verticalDivide{
+  border-right:1px solid #ccc; 
+}
+
+.footer{
+  width: 100%;
+  background-color: #0b5fa5;
+  // border-top: 2px solid #333;
+}
+
+.innerShadow1{
+  padding-top: 1px;
+  background-color: #555;
+  width: 100%;
+  height: 1px;
+}
+
+.innerShadow2{
+  padding-top: 1px;
+  background-color: #777;
+  width: 100%;
+  height: 1px;
+}
+
+.redlink{
+  color: #a60000;
+  font-size: 2.8em;
+}
+.detailsFooter{
+  background: #BBB;
+}
+
+.forum_b{
+background-color: #ddd;
+}
+
+.forum_main{
+  background-color: #fff;
+  border: 1px solid #aaa;
+}

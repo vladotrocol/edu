@@ -1,41 +1,64 @@
-<h1>Welcome <%= current_user.name%></h1>
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Central View of Users</h3>
-  </div>
-  <div class="panel-body">
+<div class="container">
+</br>
+<div class="row">
+	<%= render 'layouts/banner' %>
+<!--   <div class="col-md-10 col-md-offset-1 text-center">
+  	<%= image_tag("smile.jpg", :alt => "smiles", :class => "stretched") %>
+  	</div> -->
+</div>	
+<hr>
+<div class="row">
+  <div class="col-md-12 col-md-offset-0 text-center">
 
 
-<table class="table table-striped" summary="User list">
-	
-		<thead>
-    		<tr>
+  		<div class="col-md-4 col-md-offset-0 text-center">
+  			<div class="GlyphContainer1 text-center">
+				<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+			</div>	
+				<h2 class = "redlink">About Us</h2>
+				<p class = "text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+			<div class="detailsFooter">More details:</div>
+		</div>
 
-			<th>Id</th>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Age</th>
-			<th>Phone Number</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @users.each do |user| %>
-		<tr>
-			<td><%= user.id %></td>
-			<td><%= user.name %></td>
-			<td><%= user.email %></td>
-			<td><%= calculate_age(user.birthday) %></td>
-			<td><%= number_to_phone(user.phone) %></td>
-			<td><%= link_to "Send Email", {:controller => '/user_email', :action => 'new', :id => user.id}%></td>
-			<td><%= link_to "Blog", {:controller => '/post', :action => 'index'}%></td>
-			<td><%= link_to "New Post", {:controller => '/post', :action => 'new'}%></td>			
-		</tr>
-		<%end%>
-	</tbody>
-	</table>
+		<div class="col-md-4 col-md-offset-0">
+			<div class="GlyphContainer2 text-center">
+			<span class="glyphicon glyphicon-book" aria-hidden="true"></span>
+		</div>
+			<h2 class = "redlink">Courses</h2>
+			<p class = "text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+			<div class="detailsFooter">More details:</div>
+		</div>
 
-  </div>
+		<div class="col-md-4 col-md-offset-0">
+			<div class="GlyphContainer3 text-center">
+			<span class="glyphicon glyphicon-text-width" aria-hidden="true"></span>
+		</div>
+			<h2 class = "redlink">Other Services</h2>
+			<p class = "text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+			<div class="detailsFooter">More details:</div>
+		</div>
+
+	</div>
+
 </div>
+</br>
+</div>
+<%= render 'layouts/footer' %>
 
 
 

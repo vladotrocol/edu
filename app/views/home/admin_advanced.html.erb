@@ -1,3 +1,5 @@
+<h1>Welcome <%= current_user.name%> </h1>
+<%= link_to "Basic", {:action => 'admin_basic'}%>
 <ul class="nav nav-tabs">
   <% @DB.each do |name, table|%>
      <li><a href=<%="##{name.downcase}"%> data-toggle="tab" aria-expanded="true"><%= name %></a></li>

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin/index'
+
   get 'user_email/new'
 
   root to: 'home#index'
