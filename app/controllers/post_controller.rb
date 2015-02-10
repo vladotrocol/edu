@@ -1,7 +1,8 @@
 class PostController < ApplicationController
   def index
     @users = User.all
-    @posts = Post.all
+    @posts = Post.all.page(params[:page]).per(2).order("created_at desc")
+    @recent = Post.all.order("created_at desc").limit(5)
   end
 
   def new

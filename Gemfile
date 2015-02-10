@@ -24,6 +24,8 @@ gem 'omniauth-facebook'
 gem 'certified'
 
 gem 'figaro'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
