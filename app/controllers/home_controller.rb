@@ -20,4 +20,8 @@ class HomeController < ApplicationController
   def admin_basic
     @users = User.all
   end
+
+  def admin_basic_show
+     @user = User.find(params[:id])
+  end
 end

@@ -1,42 +1,44 @@
 <h1>Welcome <%= current_user.name%> </h1>
-<%= link_to "Advanced", {:action => 'admin_advanced'}%>
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Central View of Users</h3>
-  </div>
-  <div class="panel-body">
-
-
-<table class="table table-striped" summary="User list">
-	
-		<thead>
-    		<tr>
-
-			<th>Id</th>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Age</th>
-			<th>Phone Number</th>
-		</tr>
-	</thead>
-	<tbody>
-		<% @users.each do |user| %>
-		<tr>
-			<td><%= user.id %></td>
-			<td><%= user.name %></td>
-			<td><%= user.email %></td>
-			<td><%= calculate_age(user.birthday) %></td>
-			<td><%= number_to_phone(user.phone) %></td>
-			<td><%= link_to "Send Email", {:controller => '/user_email', :action => 'new', :id => user.id}%></td>
-			<td><%= link_to "Blog", {:controller => '/post', :action => 'index'}%></td>
-			<td><%= link_to "New Post", {:controller => '/post', :action => 'new'}%></td>			
-		</tr>
-		<%end%>
-	</tbody>
-	</table>
-
-  </div>
-</div>
-
-
-
+<%= form_tag("/user_email/new", method: "get") do %>
+	<div class = "row">
+		<div class="col-md-2 text-center">
+				<div class="list-group">
+					<%= link_to "Advanced", {:controller => 'home', :action => 'admin_advanced'}, :class => "list-group-item text-center"%>
+				<%= link_to "Send Email", {:controller => 'user_email', :action => 'new', :id => 1}, :class => "list-group-item text-center"%>
+				<%= submit_tag("Email", :class => "list-group-item text-center") %>
+			</div>
+		</div>
+		<div class="col-md-10">
+			<div class="panel panel-primary">
+					<div class="panel-heading">
+					<h3 class="panel-title">Central View of Users</h3>
+					</div>
+  				<div class="panel-body">
+					<table class="table table-striped" summary="User list">
+						<thead>
+							<tr>
+								<th>Id</th>
+								<th>Name</th>
+								<th>Email</th>
+								<th>Age</th>
+								<th>Phone Number</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% @users.each do |user| %>
+							<tr>
+								<td><%= user.id %></td>
+								<td><%= user.name %></td>
+								<td><%= user.email %></td>
+								<td><%= calculate_age(user.birthday) %></td>
+								<td><%= number_to_phone(user.phone) %></td>	
+								<td><%= check_box_tag "user_ids[]", user.id %></td>
+							</tr>
+							<%end%>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%end%>

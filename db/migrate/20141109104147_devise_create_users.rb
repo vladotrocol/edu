@@ -1,6 +1,7 @@
 class DeviseCreateUsers < ActiveRecord::Migration
   def change
     create_table(:users) do |t|
+      t.integer :admin, default: 0
       t.string :provider
       t.string :uid
 

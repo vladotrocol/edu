@@ -153,3 +153,10 @@ border-left-color: #111111;
 .logo_link{
   font-size: 2em;
 }
+
+a.white-links{
+      color: #fff;
+      &:hover {
+         color: #fff;
+       }
+     }
