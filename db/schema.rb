@@ -22,7 +22,9 @@ ActiveRecord::Schema.define(version: 20141124143400) do
   end
 
   create_table "courses", force: true do |t|
-    t.string   "name"
+    t.string   "title"
+    t.text     "description"
+    t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

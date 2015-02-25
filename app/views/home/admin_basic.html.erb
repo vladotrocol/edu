@@ -17,7 +17,7 @@
 					<table class="table table-striped" summary="User list">
 						<thead>
 							<tr>
-								<th>Id</th>
+								<th>Admin</th>
 								<th>Name</th>
 								<th>Email</th>
 								<th>Age</th>
@@ -27,7 +27,12 @@
 						<tbody>
 							<% @users.each do |user| %>
 							<tr>
-								<td><%= user.id %></td>
+								<% if user.admin == 1 %>
+									<td> <input type="checkbox" value="admin" checked/></td>
+							    <%else%>
+							    	<td> <input type="checkbox" value="admin"/></td>
+							    <%end%>
+
 								<td><%= user.name %></td>
 								<td><%= user.email %></td>
 								<td><%= calculate_age(user.birthday) %></td>
